@@ -18,7 +18,25 @@
     <%= t('configure_yandex_market.url') %>
     <br class="clear" />
     <%= text_field_tag "preferences[preferred_url]", @config.preferred_url, :size => 50 %>
-  </label>    
+  </label>
+  <br class="clear" />
+  <label for="preferences_preferred_delivery">
+    <%= t('configure_yandex_market.delivery') %>
+    <br class="clear" />
+    <%= check_box_tag "preferences[preferred_delivery]", "true", @config.preferred_delivery %>    
+  </label>
+  <br class="clear" />
+  <label for="preferences_preferred_pickup">
+    <%= t('configure_yandex_market.pickup') %>
+    <br class="clear" />
+    <%= check_box_tag "preferences[preferred_pickup]", "true", @config.preferred_pickup %>    
+  </label>
+  <br class="clear" />
+  <label for="preferences_preferred_store">
+    <%= t('configure_yandex_market.store') %>
+    <br class="clear" />
+    <%= check_box_tag "preferences[preferred_store]", "true", @config.preferred_store %>        
+  </label>
 </fieldset>
 
 <fieldset>

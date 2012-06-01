@@ -5,6 +5,9 @@ class YandexMarketConfiguration < Configuration
   preference :short_name,      :string
   preference :full_name,       :string
   preference :url,             :string
+  preference :delivery,        :boolean, :default => true
+  preference :pickup,          :boolean, :default => false
+  preference :store,           :boolean, :default => false
   preference :local_delivery_cost, :string # стоимость доставки по своему региону, может быть произвольной текстовой фразой
   preference :sales_notes,     :string
   preference :only_backorder,  :boolean, :default => false

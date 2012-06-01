@@ -23,19 +23,19 @@
   <label for="preferences_preferred_delivery">
     <%= t('configure_yandex_market.delivery') %>
     <br class="clear" />
-    <%= check_box_tag "preferences[preferred_delivery]", "true", @config.preferred_delivery %>    
+    <%= check_box_tag "preferences[preferred_delivery]", @config.preferred_delivery, @config.preferred_delivery %>    
   </label>
   <br class="clear" />
   <label for="preferences_preferred_pickup">
     <%= t('configure_yandex_market.pickup') %>
     <br class="clear" />
-    <%= check_box_tag "preferences[preferred_pickup]", "true", @config.preferred_pickup %>    
+    <%= check_box_tag "preferences[preferred_pickup]", @config.preferred_pickup, @config.preferred_pickup %>    
   </label>
   <br class="clear" />
   <label for="preferences_preferred_store">
     <%= t('configure_yandex_market.store') %>
     <br class="clear" />
-    <%= check_box_tag "preferences[preferred_store]", "true", @config.preferred_store %>        
+    <%= check_box_tag "preferences[preferred_store]", @config.preferred_store, @config.preferred_store %>        
   </label>
 </fieldset>
 

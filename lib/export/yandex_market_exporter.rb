@@ -111,8 +111,8 @@ module Export
         # На самом деле наличие shipping_category не обязательно должно быть чтобы была возможна доставка
         # смотри http://spreecommerce.com/documentation/shipping.html#shipping-category
         xml.delivery               @config.preferred_delivery
-        xml.pickup                 @config.preferred_pickup
-        xml.store                  @config.preferred_store
+        #xml.pickup                 @config.preferred_pickup
+        #xml.store                  @config.preferred_store
         xml.local_delivery_cost    @config.preferred_local_delivery_cost unless @config.preferred_local_delivery_cost.blank?
         xml.typePrefix             product_properties[@config.preferred_type_prefix] if product_properties[@config.preferred_type_prefix]
         xml.name                   product.name
@@ -135,8 +135,8 @@ module Export
       xml.offer(opt) {
         shared_xml(xml, product, cat)
         xml.delivery               @config.preferred_delivery
-        xml.pickup                 @config.preferred_pickup
-        xml.store                  @config.preferred_store
+        #xml.pickup                 @config.preferred_pickup
+        #xml.store                  @config.preferred_store
         xml.local_delivery_cost @config.preferred_local_delivery_cost unless @config.preferred_local_delivery_cost.blank?
         xml.name                product.name
         xml.vendorCode          product_properties[@config.preferred_vendor_code]

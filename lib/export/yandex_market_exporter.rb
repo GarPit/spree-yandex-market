@@ -110,7 +110,7 @@ module Export
         # xml.delivery               !product.shipping_category.blank?
         # На самом деле наличие shipping_category не обязательно должно быть чтобы была возможна доставка
         # смотри http://spreecommerce.com/documentation/shipping.html#shipping-category
-        xml.delivery               @config.preferred_delivery
+        #xml.delivery               @config.preferred_delivery
         #xml.pickup                 @config.preferred_pickup
         #xml.store                  @config.preferred_store
         xml.local_delivery_cost    @config.preferred_local_delivery_cost unless @config.preferred_local_delivery_cost.blank?
@@ -134,7 +134,7 @@ module Export
       opt = { :id => product.id,  :available => (@config.preferred_only_backorder ? false : product.has_stock?) }
       xml.offer(opt) {
         shared_xml(xml, product, cat)
-        xml.delivery               @config.preferred_delivery
+        #xml.delivery               @config.preferred_delivery
         #xml.pickup                 @config.preferred_pickup
         #xml.store                  @config.preferred_store
         xml.local_delivery_cost @config.preferred_local_delivery_cost unless @config.preferred_local_delivery_cost.blank?
